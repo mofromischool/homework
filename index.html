@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Test</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: white;
+            }
+            #bye {
+                color: red;
+            }
+            #hi {
+                color: green;
+            }
+            body {
+                background-color: black;
+            }
+            button {
+                color: red;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>This is a java test</h1>
+        <br>
+        <h3 id="bye" style="display: none;">Bye User!</h3>
+        <h3 id="hi" style="display: none;">Hi User!</h3>
+        <br>
+        <button onclick='document.getElementById("bye").style.display="block", document.getElementById("hi").style.display="none" '>Say bye</button>
+        <button onclick='document.getElementById("hi").style.display="block", document.getElementById("bye").style.display="none" '>Say hi</button>
+    </body>
+</html>
