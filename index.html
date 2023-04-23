@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Java Test</title>
+        <title>Java Chat</title>
         <style>
             h1 {
                 text-align: center;
@@ -20,15 +20,29 @@
                 color: red;
                 background-color: blue;
             }
+            #pork {
+                margin-top: 1000px;
+            }
+            #RejectCall {
+                margin-left: 1000px;
+            }
         </style>
     </head>
     <body>
-        <h1>This is a java test</h1>
+        <h1>Talk to Java!</h1>
         <br>
         <h3 id="bye" style="display: none;">Bye User!</h3>
         <h3 id="hi" style="display: none;">Hi User!</h3>
+        <h1 id="john" style="display: none;"> <img src="https://pbs.twimg.com/ext_tw_video_thumb/1642722434276278272/pu/img/aLzVayN_lpRO3poS.jpg" alt="John Pork is calling" height="400" width="300"> </h1>
+        <h1 id="YouAnswered" style="display: none;"> <img src="https://imagecache.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ba89abb4-f1a9-40c0-ad5e-512467799800/width=450/00057-2206060811.jpeg" alt="You answered" height="400" width="300"> </h1>
+        <h1 id="YouRejected" style="display: none;"> <img src="Capture.PNG" alt="You rejected" height="400" width="300"> </h1>
         <br>
-        <button onclick='document.getElementById("bye").style.display="block", document.getElementById("hi").style.display="none" '>Say bye</button>
-        <button onclick='document.getElementById("hi").style.display="block", document.getElementById("bye").style.display="none" '>Say hi</button>
+        <button id="byebutton" onclick='document.getElementById("bye").style.display="block", document.getElementById("hi").style.display="none" '>Say bye</button>
+        <button id="hibutton" onclick='document.getElementById("hi").style.display="block", document.getElementById("bye").style.display="none" '>Say hi</button>
+        <button id="AcceptCall" style="display: none;" onclick="document.getElementById('YouAnswered').style.display='block', document.getElementById('AcceptCall').style.display='none', document.getElementById('RejectCall').style.display='none', document.getElementById('john').style.display='none', document.getElementById('pork').style.display='none'">Accept Call</button>
+        <br>
+        <button id="RejectCall" onclick="document.getElementById('YouRejected').style.display='block',document.getElementById('AcceptCall').style.display='none', document.getElementById('RejectCall').style.display='none', document.getElementById('john').style.display='none', document.getElementById('pork').style.display='none'" style="display: none;">Reject Call</button>
+        <br>
+        <button id="pork" onclick='document.getElementById("hi").style.display="none", document.getElementById("bye").style.display="none", document.getElementById("hibutton").style.display="none", document.getElementById("byebutton").style.display="none", document.getElementById("john").style.display="block", document.getElementById("AcceptCall").style.display="block", document.getElementById("RejectCall").style.display="block" '>View Calls</button>
     </body>
 </html>
